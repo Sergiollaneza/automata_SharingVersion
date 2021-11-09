@@ -1,6 +1,6 @@
-Package: automata
+Package: automata_SharingVersion
 Title: Automatic TCGA downloading and processing package
-Version: 2.0.0
+Version: 2.6.3
 Authors@R: person("Sergio", "Llaneza-Lago", email = "s.llaneza-lago@uea.ac.uk", role = c("aut", "cre"))
 Description: The package contains functions to download data from the TCGA database, process it, and check gene differential expression. This should be longer.
 Depends: R (>= 3.5.0),
@@ -16,4 +16,5 @@ Imports:
     SummarizedExperiment,
     dplyr,
     magrittr,
-    biomaRt
+    biomaRt,
+    DESeq2
