@@ -3,6 +3,8 @@
 #'
 #' Checks which genes are differentially expressed, differentially methylated, have mutations
 #' and copy number variations.
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @importFrom readr read_csv
 #' @importFrom dplyr filter pull
 #' @importFrom Vennerable Venn

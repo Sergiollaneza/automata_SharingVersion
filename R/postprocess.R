@@ -3,6 +3,8 @@
 #' Takes the first run of a combination and sorts the rest of the runs according to that one. In order
 #' to identify the corresponding column, Spearman's correlation is used.
 #'
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @import here
 #' @importFrom  readr read_csv write_csv
 #' @importFrom dplyr bind_rows filter group_by arrange ungroup
@@ -164,6 +166,8 @@ sortGamma <- function(project, automataID){
 #' Checks each one of the 100 gamma files and calculates a mean gamma. The file with the lowest distance
 #' between the mean and its values is chosen as the most representative.
 #'
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @import here
 #' @importFrom  tibble tibble
 #' @importFrom  readr read_csv write_csv
@@ -248,8 +252,8 @@ compareGammas <- function(project, automataID){
 #'
 #' Calculates the correlation for each combination and selects the one with closest Pearson to 0 and
 #' p-value lower than 0.05 as the best.
-#' @param project .
-#' @param automataID .
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #'
 #' @importFrom readr read_csv write_csv read_delim
 #' @import here
@@ -340,10 +344,9 @@ calculateCorrelation <- function(project, automataID, genes){
 
 #' Assigns each sample to an LPD group according to the gamme value
 #'
-#' The title is quite selfexplanatory, i am so sleepy.
-#' @param project .
-#' @param automataID .
-#'
+#' Assigns each sample to an LPD group according to the gamme value
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @importFrom readr read_csv write_csv
 #' @import here
 #' @importFrom dplyr mutate arrange select
@@ -424,8 +427,8 @@ assignGammas <- function(project, automataID, genes){
 #'
 #' Process each run and select the best one across the three combinationss and assigns each sample
 #' to the LPD group to which they are more represented.
-#' @param project
-#' @param automataID
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #'
 #' @importFrom readr read_csv
 #' @import here

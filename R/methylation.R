@@ -1,9 +1,8 @@
 #' Analysis of methylation data
 #'
-#' Performs an analysis of the methylation data downloaded from the TCGA
-#' @param project .
-#' @param automataID .
-#'
+#' Performs an analysis of the methylation data downloaded from the TCGA comparing each LPD group.
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @import magrittr
 #' @import here
 #' @import ggplot2

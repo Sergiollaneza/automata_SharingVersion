@@ -2,8 +2,8 @@
 #'
 #' Creates genomic ranges for the CNV data downloaded from the TCGA and finds overlaps with genomic ranges
 #' originated from ENSEMBL.
-#' @param project .
-#' @param automataID .
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @import magrittr
 #' @import here
 #' @importFrom readr read_csv write_csv
@@ -82,8 +82,9 @@ generateAberrations <- function(project, automataID){
 
 #' Performs CNV analysis
 #'
-#' @param project
-#' @param automataID
+#' Compares the proportion and location of chromosomical aberrations beetween each LPD groups.
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @import magrittr
 #' @importFrom dplyr mutate filter slice tally
 #' @importFrom tidyr replace_na

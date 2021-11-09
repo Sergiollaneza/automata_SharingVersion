@@ -1,9 +1,9 @@
 #' Get the differentially expressed genes
 #'
-#' Creates CSV files with the log2Folf of the top 500 genes and plots it in a tornado plot for each LPD process.
+#' Creates CSV files with the log2Fold of the top 500 genes and plots it in a tornado plot for each LPD process.
 #'
-#' @param project .
-#' @param automataID .
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @param microarray Defaults to FALSE
 #' @importFrom readr read_csv write_csv
 #' @import here

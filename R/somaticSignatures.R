@@ -2,8 +2,8 @@
 #' Analysis of somatic signatures
 #'
 #' Does an analysis of somatic signatures
-#' @param project
-#' @param automataID
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @import BSgenome.Hsapiens.UCSC.hg38
 #' @import magrittr
 #' @import ggplot2

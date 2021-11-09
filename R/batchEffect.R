@@ -3,8 +3,8 @@
 #' Compares proportion of different TSS and sample type for each LPD group to see if there
 #' is a significant diffence between them.
 #'
-#' @param project
-#' @param automataID
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @return A CSV file with proportions of TSS; a CSV filr with proportions of sample type: a
 #' CSV file with proportions of TSS and sample type
 #' @importFrom readr read_csv
@@ -189,57 +189,6 @@ batchEffect <- function(project, automataID){
     summary <- bind_rows(summary, summaryTibble)
 
     }
-
-
-
-#   # Check by both -----------------------------
-#   assignedCombined.proportion <- gammaValues %>%
-#     mutate(Combined = paste(TSS, SampleType, sep = "_")) %>%
-#     group_by(Max_LPD, Combined) %>%
-#     summarise(n = n()) %>%
-#     spread(key = Combined, value = n) %>%
-#     replace(is.na(.), 0)
-#
-#   # I need to calculate the chisq of one group against all other together
-#   chi.pvals <- vector()
-#   chi.residual <- vector()
-#
-#   for(i in 1:nrow(assignedCombined.proportion)){
-#     tempMatrix <- as.matrix(bind_rows(assignedCombined.proportion[i, -1], colSums(assignedCombined.proportion[-i, -1])))
-#     chisq <- chisq.test(tempMatrix)
-#
-#     dimnames(tempMatrix) <- list(Process = c("LPD_Selected", "LPD_Context"),
-#                                  TSS = colnames(tempMatrix))
-#
-#     # Uses posthoc to calculate the p.values of each column
-#     chis.posthoc <- chisq.posthoc.test(tempMatrix) %>%
-#       slice(1:2) %>%
-#       select(-Dimension) %>%
-#       remove_rownames() %>%
-#       column_to_rownames("Value") %>%
-#       t() %>%
-#       as.data.frame() %>%
-#       rownames_to_column("TSS") %>%
-#       filter(`p values` <= 0.05)
-#
-#     # Gets only the names of the significant TSS
-#     significantResiduals <- ifelse(nrow(chis.posthoc) > 0, paste(chis.posthoc$TSS, collapse = ", "),
-#                                    "None")
-#
-#     chi.pvals[i] <- chisq$p.value
-#     # Takes the name of the column with the highest sum of residuals as the most variant
-#     chi.residual[i] <- significantResiduals
-#   }
-#
-#   assignedCombined <- assignedCombined.proportion %>%
-#     ungroup() %>%
-#     mutate(chisq.pval = chi.pvals,
-#            chisq.padj = p.adjust(chisq.pval, method = "BH"),
-#            significant.residual = chi.residual)
-#
-#   write_csv(assignedCombined, here::here("TCGA_results", project, automataID, "batch_effect",
-#                                          paste0("CombinedProportions_", project, "_", automataID, ".csv")))
-# }
 
 
   write_csv(summary, here::here("TCGA_results", project, automataID,

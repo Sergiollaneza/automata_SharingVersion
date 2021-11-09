@@ -1,9 +1,12 @@
 #' Clinical analysis
 #'
-#' Does a clinical analysis
+#' Performs a analysis of the clinical data on the overall groups and between each LPD groups.
+#' The analysis consists on (1) comparing proportions of patients according to cancer stage, gender, race, primary pathology and (only in prosta) Gleason score;
+#' (2) using a KM surival estimator and comparing curves using a log-rank test; and (3) in selected cancer
+#' use a Cox model for hazard comparison.
 #'
-#' @param .
-#' @param .
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @importFrom readr read_csv
 #' @importFrom dplyr filter mutate inner_join
 #' @importFrom tidyr spread

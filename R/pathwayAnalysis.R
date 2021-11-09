@@ -1,9 +1,9 @@
 #' Runs the pathway analysis for the given vector names
 #'
 #' Performs the pathway analysis of the given vector names.
-#' @param project .
-#' @param automataID .
-#' @param process .
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
+#' @param process LPD process name
 #' @param geneNames Genes names to analyse
 #' @param contextNames Gene names of the whole dataset (extracted from TCGA)
 #' @param positive.l2FC TRUE/FALSE
