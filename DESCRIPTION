@@ -1,0 +1,19 @@
+Package: automata
+Title: Automatic TCGA downloading and processing package
+Version: 2.0.0
+Authors@R: person("Sergio", "Llaneza-Lago", email = "s.llaneza-lago@uea.ac.uk", role = c("aut", "cre"))
+Description: The package contains functions to download data from the TCGA database, process it, and check gene differential expression. This should be longer.
+Depends: R (>= 3.5.0),
+  DESeq2
+License: What license is it under?
+Encoding: UTF-8
+RoxygenNote: 7.1.1
+Suggests:
+    testthat
+Imports: 
+    TCGAbiolinks,
+    here,
+    SummarizedExperiment,
+    dplyr,
+    magrittr,
+    biomaRt
