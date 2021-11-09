@@ -1,8 +1,8 @@
 #' SNV analysis
 #'
 #' Analyse the SNV data downloaded from the TCGA.
-#' @param project .
-#' @param automataID .
+#' @param project Name of the project to analyse according to the TCGA (e.g. TCGA-PRAD)
+#' @param automataID Custom ID tag
 #' @importFrom readr read_csv
 #' @importFrom dplyr select rename
 #' @import here

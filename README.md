@@ -9,7 +9,14 @@ The workflow of the package is divided into six steps: (1) Data downloading,  (2
 
 ## Data downloading
 
-Automata allows the downloading of transcriptome (RNA-seq or microarray), clinical, methylation, SNV, and CNV data from the TCGA.
+Automata downloads the data from The Cancer Genome Atlas an can be used for transcriptome (RNA-seq or microarray), clinical, methylation, SNV, and CNV data.
+
+The TCGA is structured into projects and each contains the data belonging to a major cancer type e.g. prostate adenocarcinoma data is on TGGA-PRAD. Projects are made up of cases which represent a unique patient and each case contains multiple files such as transcriptome or clinical features among others. 
+
+Therefore, to download the data, it is required to have the barcodes representing each patient. For this we can use the `getBarcodes` function and then use its output on the corresponding downloading function. Here is an example of how we can download all the data for prostate cancer.
+
+
+
 
 
 
