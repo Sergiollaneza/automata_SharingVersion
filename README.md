@@ -4,7 +4,7 @@ This is a version of my package Automata that does not contain confidential data
 
 Automata is a package for the downloading and processing of data from The Cancer Genome Atlas database and right now its use is restricted for the Cancer Genetics department at the University of East Anglia.
 
-The workflow of the package is divided into six steps: (1) Data downloading,  (2) Transcriptome data pre-processing, (3) Running LPD, (4) LPD Postprocessing, (5) Differential analysis and (6) Report. We strongly recommend following the workflow from beginning to end (you can find a script for that [right here](https://github.com/UEA-Cancer-Genetics-Lab)), but the package allows using just a selection of functions or using custom data. Please, notice that the LPD-related functions are meant to be run on the HPC cluster environment of the UEA.
+The workflow of the package is divided into six steps: (1) Data downloading,  (2) Transcriptome data pre-processing, (3) Running LPD, (4) LPD Postprocessing, (5) Differential analysis and (6) Report. We strongly recommend following the workflow from beginning to end (you can find a script for that [right here](https://github.com/Sergiollaneza/automata_SharingVersion/blob/main/automata_template.R)), but the package allows using just a selection of functions or using custom data. Please, notice that the LPD-related functions are meant to be run on the HPC cluster environment of the UEA.
 
 
 ## 1. Data downloading
