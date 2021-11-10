@@ -1,7 +1,8 @@
 #' Generates report to check results
 #'
 #' Creates and HTML file containing the resuls from the whole automata pipeline
-#' @param .
+#' @param project Name of a TCGA project (eg. TCGA-PRAD or TCGA-BRCA).
+#' @param automataID ID assigned to the analysis so the files from different analysis are not mixed.
 #' @importFrom readr read_csv
 #' @importFrom rmarkdown render
 #' @importFrom dplyr mutate_at
@@ -10,36 +11,6 @@
 #' @export
 generateReport <- function(project, automataID, microarray, workingPath = getwd()){
 
-  #REMOVE THIS LATER ON
-  #
-  #
-# rm(list = ls())
-#
-#   library(readr)
-#   library(rmarkdown)
-#   library(here)
-#   library(flexdashboard)
-#   library(magrittr)
-# library(dplyr)
-# library(plotly)
-# library(ggplot2)
-# library(DT)
-# library(Vennerable)
-#   source("generateChilds.R")
-#   source("generateMainRMD.R")
-#   source("generateOverview.R")
-#   source("generateSubChildren.R")
-# source("generatePathways.R")
-#   source("getBarcodes.R")
-#
-#
-#   project <- "TCGA-OV"
-#   automataID <- "eridanus"
-#   microarray = FALSE
-#   workingPath = getwd()
-  #
-  #
-  #################
 
 message("\n------GENERATING REPORT-------\n")
 # Preparations ------------------------------------------------------------
