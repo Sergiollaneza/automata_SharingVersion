@@ -1,6 +1,5 @@
 # Automata Sharing Version
 
-This is a version of my package Automata that does not contain confidential data, therefore, some of the functions and data have been removed. This version is just for display and has been not properly tested. Even so, please do not share any of the code since this is still a work in progress.
 
 Automata is a package for the downloading and processing of data from The Cancer Genome Atlas database and right now its use is restricted for the Cancer Genetics department at the University of East Anglia.
 
